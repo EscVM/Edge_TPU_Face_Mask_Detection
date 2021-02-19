@@ -41,6 +41,6 @@ If you want a mini server version.
 Once started, search on your browser [](localhost:8080). Login with the username and password 'admin'/'admin' (what else👀?).
 
 
-# 3.0 Train and Optimized a New Mask Detector
+# 3.0 Train and Optimize a New Mask Detector
 
 Coming soon...
