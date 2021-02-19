@@ -8,7 +8,7 @@ I exploited the power of Edge TPUs to build a face mask detector for Covid-19 (I
 Anyway, the code is straightforward: there's a network trained to recognize faces in an image and another one that detects the presence of the mask. I've found the first network [here](https://coral.ai/models/), and I trained the second one with this little awful [dataset](https://drive.google.com/drive/folders/1XDte2DL2Mf_hw4NsmGst7QtYoU7sMBVG) (I leave a Colab notebook to train different networks). Everything is optimized for Edge TPU inference, but you can run all the code on a CPU changing [configurations](https://github.com/EscVM/Edge_TPU_Face_Mask_Detection/blob/main/config.json). I only used opencv-python and the TensorFlow-Lite interpreter. With a couple of faces, it runs around 50 fps, as you can see in the example below.
 
 <p align="center">
-  <img width="600" height="338" src="media/demo.gif">
+  <img width="600" height="340" src="media/demo.gif">
 </p>
 
 # 1.0 Getting Started
