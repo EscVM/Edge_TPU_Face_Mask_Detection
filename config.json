@@ -1,0 +1,8 @@
+{
+    "threshold_face": 0.1,
+    "camera": 0,
+    "threshold_mask": 0.8,
+    "cpu_face": false,
+    "cpu_mask": false,
+    "models_path": "models"
+}

@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <meta http-equiv="refresh" content="60">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Mask Detection @ Edge</title>
+    <link rel="stylesheet" type="text/css" href="static/style_index.css">
+    <link rel="shortcut icon" type="image/png" href="static/favicon.ico"/>
+    <meta name="author" content="VM/FS">
+  </head>
+  <body>
+    <h1 align="center"> ~ Face Mask Detection @ Edge ~</h1>
+    <p>This is an <b> Edge AI </b> application. Inference is performed using a TPU hardaware accelerator to provide more than 50 fps with less then 4 W. 
+    </p>
+    <img alt="Loading..." src="{{ url_for('video_feed') }}" class="center">
+    <img src="{{url_for('static', filename='logo_pic.png')}}" align="left">
+  </body>
+</html>
