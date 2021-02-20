@@ -35,7 +35,7 @@ Instead, if you want a mini server version.
    python3 main_server.py
    ```
 
-Once started, search on your browser [localhost:8080](localhost:8080). Login with the username and password 'admin'/'admin' (what👀?).
+Once started, search on your browser [localhost:8080](http://localhost:8080). Login with the username and password 'admin'/'admin' (what👀?).
 
 
 # 3.0 Train and Optimize a New Mask Detector
