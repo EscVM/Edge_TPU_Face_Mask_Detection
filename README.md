@@ -29,7 +29,7 @@ Install on the hosting device the following libraries:
    python3 main.py
    ```
    
-Instead, if you want a mini server version.
+Instead, if you want a mini server version, run the following command:
 
    ```bash
    python3 main_server.py
