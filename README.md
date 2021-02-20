@@ -2,10 +2,7 @@
 
 <h1 align="center"> ~ Face Mask Detection with Edge TPU ~ </h1>
 
-It's time for a new, time-waster project🥳!! Actually, this little repository is a little bit less pointless than other [ones](https://github.com/EscVM/RPS_with_Edge_TPU) and could be useful for someone. 
-I exploited the power of Edge TPUs to build a face mask detector for Covid-19 (I really had to do something for Covid-19 😂).
-
-Anyway, the code is straightforward: there's a network trained to recognize faces in an image and another one that detects the presence of the mask. I've found the first network [here](https://coral.ai/models/), and I trained the second one with this little awful [dataset](https://drive.google.com/drive/folders/1XDte2DL2Mf_hw4NsmGst7QtYoU7sMBVG) (I leave a Colab notebook to train different networks). Everything is optimized for Edge TPU inference, but you can run all the code on a CPU changing [configurations](https://github.com/EscVM/Edge_TPU_Face_Mask_Detection/blob/main/config.json). I only used opencv-python and the TensorFlow-Lite interpreter. With a couple of faces, it runs around 50 fps, as you can see in the example below.
+Face mask detection on Edge TPU at more than 50 fps. The code is very straightforward: there's a network trained to recognize faces in an image and another one that detects the presence of the mask. The first network can be found [here](https://coral.ai/models/), and the second one has been trained with this little [dataset](https://drive.google.com/drive/folders/1XDte2DL2Mf_hw4NsmGst7QtYoU7sMBVG) (A Colab notebook is provided to train a new classifier on top of a different backbone). Everything is optimized for Edge TPU inference, but it's possible to run all the code on a CPU changing [configurations](https://github.com/EscVM/Edge_TPU_Face_Mask_Detection/blob/main/config.json). Only opencv-python and the TensorFlow-Lite interpreter are needed. As it's possible to see in the example below, it runs around 50 fps with a couple of faces with less than 4W! Enjoy 👨‍💻
 
 <p align="center">
   <img width="600" height="340" src="media/demo.gif">
@@ -38,9 +35,10 @@ If you want a mini server version.
    python3 main_server.py
    ```
 
-Once started, search on your browser [](localhost:8080). Login with the username and password 'admin'/'admin' (what else👀?).
+Once started, search on your browser [](localhost:8080). Login with the username and password 'admin'/'admin' (what👀?).
 
 
 # 3.0 Train and Optimize a New Mask Detector
-
-Coming soon...
+With the following notebook you can easily train a new classifier on top of whitchever backbone found [here](https://keras.io/api/applications/#densenet)(almost).
+Once trained and converted you can place it in the [models](https://github.com/EscVM/Edge_TPU_Face_Mask_Detection/tree/main/models) folder. Rember to change paths in the [detector](https://github.com/EscVM/Edge_TPU_Face_Mask_Detection/blob/main/utils/detector.py) module.<br/><br/>
+<a href="https://colab.research.google.com/drive/1kgEGysvTbL_1S7_X6pDwfVw7g28w8LnD?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
